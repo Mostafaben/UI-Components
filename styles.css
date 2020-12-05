@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+* {
+  padding: 0px;
+  transition-duration: 200ms;
+  margin: 0px;
+  font-family: 'Lato', sans-serif;
+}
+body {
+  background: #eaedf2;
+  padding: 0px;
+  margin: 0px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+
+  align-items: center;
+}
+
+.card {
+  min-width: 200px;
+  margin: 20px;
+  box-shadow: 1px 2px 3px #dddddd;
+  position: relative;
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+  padding-top: 100px;
+  color: #49415d;
+}
+
+.card h4 span {
+  color: #888888;
+  font-size: 12px;
+}
+
+.card img {
+  width: 160px;
+  position: absolute;
+  height: 160px;
+  top: -80px;
+  border-radius: 50%;
+  left: 40px;
+}
+
+.card h4 {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.card h4 .star {
+  width: 14px;
+  height: 14px;
+  border-radius: 8px;
+  margin-left: auto;
+  margin-right: 5px;
+  background-color: yellow;
+}
+.card h5 {
+  color: #9990a0;
+}
+.card .actions {
+  display: flex;
+  padding-top: 20px;
+  flex-direction: row;
+  align-items: center;
+}
+
+.btn {
+  width: 35px;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 1px 2px 3px #dddddd;
+  font-size: 20px;
+  height: 35px;
+}
+
+.plus {
+  background-color: rgb(46, 37, 69);
+  color: rgb(231, 145, 139);
+
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.minus {
+  background-color: #fd7b38;
+  color: white;
+}
+
+.active {
+  background-color: rgb(36, 36, 36);
+  padding-top: 50px !important;
+}
+
+.active .actions {
+  display: none;
+}
+.preview-image {
+  background-color: white;
+  transform: scale(0.7);
+  padding: 30px;
+  top: -150px !important;
+  left: 5px !important;
+  border-radius: 100%;
+}
+
+.rest {
+  background-color: rgb(40, 4, 141);
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  position: absolute;
+  bottom: 20px;
+  border-radius: 30px;
+  outline: none;
+}
+
+.click {
+  animation: clicked 1s infinite;
+}
+
+@keyframes clicked {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.dialog {
+  position: relative;
+  animation: open-dialog 500ms;
+}
+
+@keyframes open-dialog {
+  0% {
+    opacity: 0;
+    transform: translateY(300px);
+  }
+  100% {
+  }
+}
+
+.dialog .dialog-container {
+  background-color: white;
+  width: fit-content;
+  min-width: 430px;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.dialog .content textarea {
+  width: 100%;
+  resize: none;
+}
+
+.avatar img {
+  width: 60px;
+  height: 60px;
+  border-radius: 20px;
+}
+.avatar {
+  padding: 10px;
+  position: absolute;
+  background-color: white;
+  border-radius: 20px;
+  top: -25px;
+  left: 0px;
+}
+.dialog-container .content h5 {
+  color: rgb(49, 49, 49);
+  font-size: 16px;
+  padding-left: 60px;
+}
+
+.dialog-container .content textarea {
+  border: none;
+  margin: 20px 1px;
+  outline: none;
+  border-radius: 20px;
+  padding: 20px;
+  min-height: 100px;
+  background-color: rgb(245, 246, 247);
+}
+
+.dialog-container .content textarea:focus {
+  border: 1px solid rgb(40, 4, 141);
+}
+
+.dialog-container .actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dialog-container .actions button {
+  border: none;
+  height: 50px;
+  padding: 0px 20px;
+  border-radius: 20px;
+  display: flex;
+  font-size: 15px;
+  flex-direction: row;
+  align-items: center;
+  font-weight: 500;
+  outline: none;
+}
+
+.dialog-container .actions button:focus {
+  transform: translateY(-4px);
+  box-shadow: 0px 1px 0px rgba(139, 139, 139, 0.219);
+}
+
+.dialog-container .actions i {
+  font-size: 20px;
+}
+
+.dialog-container .actions button p {
+  margin-left: 10px;
+}
+
+.dialog-container .actions button:nth-child(1) {
+  color: blue;
+  background-color: rgba(93, 93, 255, 0.089);
+}
+
+.dialog-container .actions button:nth-child(2) {
+  color: green;
+  background-color: rgba(93, 255, 93, 0.089);
+}
+
+.dialog-container .actions button:nth-child(3) {
+  color: #ffbf29;
+  background-color: rgb(255, 247, 229);
+}
+.dialog-container .actions button:last-child {
+  color: rgb(255, 55, 76);
+  background-color: rgb(255, 243, 244);
+}
