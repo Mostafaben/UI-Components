@@ -91,7 +91,7 @@ body {
   height: 300px;
 }
 .card-clicked {
-  background-color: rgba(255, 255, 255, 0) !important;
+  background-color: transparent !important;
   padding-top: 180px;
 }
 
@@ -107,4 +107,12 @@ body {
 }
 .card-clicked .content h3 {
   color: white;
+}
+
+.card-darging {
+  background-color: rgb(66, 66, 66) !important;
+}
+
+.card-darging h3 {
+  color: white !important;
 }

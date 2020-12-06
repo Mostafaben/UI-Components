@@ -58,14 +58,65 @@ function clearScreen(e) {
   isScreenClear = !isScreenClear;
 }
 
-let card = document.getElementById('card');
-let cardIsClicked = false;
+// end dragin
+function handleMouseUp() {
+  isDragin = false;
+}
 
-function cardClicked(e) {
+// start dragin
+function handleMouseDown() {
+  if (!isClicking) isDragin = true;
+}
+
+// add click effect
+function handleClick(e) {
+  // change the shape of the card
+  transformCardToImage();
+
+  // handle the click effect
+  isClicking = true;
+  card2.style.transform = 'scale(0.9)';
+  setTimeout(() => {
+    card2.style.transform = 'scale(1)';
+  }, 300);
+  card.style.boxShadow = '0px 3px 0px #dddddd';
+  setTimeout(() => {
+    card2.style.transform = 'scale(1)';
+    card.style.boxShadow = 'none';
+    isClicking = false;
+  }, 200);
+}
+
+function transformCardToImage() {
   if (cardIsClicked) {
-    card.classList.remove('card-clicked');
+    card2.classList.add('card-clicked');
   } else {
-    card.classList.add('card-clicked');
+    card2.classList.remove('card-clicked');
   }
   cardIsClicked = !cardIsClicked;
 }
+
+// cancel following mouse
+window.onmousemove = (e) => {
+  if (isDragin) {
+    card2.classList.add('card-darging');
+    card2.style.position = 'absolute';
+    card2.style.transitionDuration = '0ms';
+    card2.style.top = e.clientY;
+    card2.style.left = e.clientX;
+  } else {
+    card2.style.position = 'relative';
+  }
+};
+
+// follow the mouse
+window.onmouseup = (e) => {
+  if (isDragin) {
+    card2.style.transitionDuration = '300ms';
+    card2.style.position = 'relative';
+    card2.style.top = '0px';
+    card2.style.left = '0px';
+    card2.classList.remove('card-darging');
+    isDragin = false;
+  }
+};

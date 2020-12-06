@@ -11,11 +11,11 @@
       href="https://cdn.rawgit.com/mfd/09b70eb47474836f25a21660282ce0fd/raw/e06a670afcb2b861ed2ac4a1ef752d062ef6b46b/Gilroy.css"
     />
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-    <script defer src="assets/js/actions.js"></script>
+    <script src="assets/js/actions.js" defer></script>
     <script src="script.js" lang="javascript" defer></script>
   </head>
   <body>
-    <div class="card" id="card" onclick="cardClicked()">
+    <div class="card" id="card" onclick="handleClick()">
       <img
         src="https://media.wired.com/photos/5bcea2642eea7906bba84c67/master/w_2560%2Cc_limit/iphonexr.jpg"
         alt="iphone"
@@ -29,7 +29,11 @@
         <p>Stay up with our latest new products</p>
         <div class="message">
           <p>Thanks for subsription</p>
-          <i class="fas fa-smile"></i>
+          <i
+            class="fas fa-smile"
+            onmousedown="handleMouseDown()"
+            onmouseup="handleMouseUp()"
+          ></i>
         </div>
       </div>
     </div>
