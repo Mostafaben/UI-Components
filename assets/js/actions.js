@@ -57,3 +57,15 @@ function clearScreen(e) {
   }
   isScreenClear = !isScreenClear;
 }
+
+let card = document.getElementById('card');
+let cardIsClicked = false;
+
+function cardClicked(e) {
+  if (cardIsClicked) {
+    card.classList.remove('card-clicked');
+  } else {
+    card.classList.add('card-clicked');
+  }
+  cardIsClicked = !cardIsClicked;
+}

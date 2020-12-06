@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+body {
+  min-height: 100vh;
+  background-color: #e7edf6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+  font-family: 'Lato';
+}
+* {
+  transition-duration: 300ms;
+}
+
+.card {
+  border-radius: 16px;
+  margin: 16px;
+  background-color: white;
+  padding: 10px;
+  width: 350px;
+  position: relative;
+}
+
+.card img {
+  width: 350px;
+  object-fit: cover;
+  height: 250px;
+  transition-duration: 100ms;
+  border-radius: 16px;
+  z-index: -1;
+}
+
+.card .vues {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 60px;
+  font-size: 14px;
+  background-color: rgba(255, 255, 255, 0.13);
+  border-radius: 16px;
+  /* backdrop-filter: ; */
+  right: 24px;
+  z-index: 3;
+  top: 186px;
+}
+
+.card h3 {
+  color: #2b2b2b;
+}
+.card p {
+  color: #cacede;
+}
+
+.card .message {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card .message p {
+  color: #888888;
+}
+
+.card .message i {
+  width: 60;
+  height: 60;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #3180ff;
+  font-size: 22px;
+}
+
+.card .content {
+  padding: 20px;
+  padding-top: 10px;
+}
+
+.card-clicked img {
+  position: absolute;
+  top: -0px;
+  left: 0px;
+  height: 300px;
+}
+.card-clicked {
+  background-color: rgba(255, 255, 255, 0) !important;
+  padding-top: 180px;
+}
+
+.card-clicked .message {
+  display: none;
+}
+.card-clicked .vues {
+  top: 10px;
+  right: 30px;
+}
+.card-clicked .content p {
+  color: white;
+}
+.card-clicked .content h3 {
+  color: white;
+}
