@@ -196,7 +196,7 @@ body {
   justify-content: space-between;
 }
 
-.dialog-container .actions button {
+button {
   border: none;
   height: 50px;
   padding: 0px 20px;
@@ -209,16 +209,16 @@ body {
   outline: none;
 }
 
-.dialog-container .actions button:focus {
+button:focus {
   transform: translateY(-4px);
   box-shadow: 0px 1px 0px rgba(139, 139, 139, 0.219);
 }
 
-.dialog-container .actions i {
+button i {
   font-size: 20px;
 }
 
-.dialog-container .actions button p {
+button p {
   margin-left: 10px;
 }
 

@@ -3,7 +3,8 @@ let image = document.getElementById('img');
 let plus_btn = document.getElementById('plus');
 let minus_btn = document.querySelector('.minus');
 let card = document.querySelector('.card');
-
+let body = document.querySelector('body');
+let isScreenClear = false;
 card.classList.add('active');
 image.classList.add('preview-image');
 

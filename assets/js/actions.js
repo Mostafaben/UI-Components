@@ -39,3 +39,21 @@ function imageFn() {
   }
   isImageOpen = !isImageOpen;
 }
+
+function clearScreen(e) {
+  let dialog = document.querySelector('.dialog');
+  let buttonContent = document.querySelector('.rest p');
+  let buttonIcon = document.querySelector('.rest i');
+  if (isScreenClear) {
+    dialog.style.display = 'block';
+    buttonContent.textContent = 'Clear Screen';
+    buttonIcon.classList.remove('fa-battery-full');
+    buttonIcon.classList.add('fa-recycle');
+  } else {
+    dialog.style.display = 'none';
+    buttonContent.textContent = 'Refill Screen';
+    buttonIcon.classList.remove('fa-recycle');
+    buttonIcon.classList.add('fa-battery-full');
+  }
+  isScreenClear = !isScreenClear;
+}
